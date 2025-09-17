@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Hotel theme colors
+        glass: "hsl(var(--glass))",
+        "glass-border": "hsl(var(--glass-border))",
+        overlay: "hsl(var(--overlay))",
+        gold: "hsl(var(--gold))",
+        "gold-light": "hsl(var(--gold-light))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +68,20 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-overlay': 'var(--gradient-overlay)',
+        'gradient-glass': 'var(--gradient-glass)',
+      },
+      boxShadow: {
+        'glow': 'var(--shadow-glow)',
+        'card': 'var(--shadow-card)',
+        'elegant': 'var(--shadow-elegant)',
+      },
+      transitionProperty: {
+        'smooth': 'var(--transition-smooth)',
+        'glow': 'var(--transition-glow)',
       },
       keyframes: {
         "accordion-down": {
