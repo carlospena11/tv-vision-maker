@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Tv, Calendar, UtensilsCrossed, Headphones } from "lucide-react";
 import { NavigationIcon } from "@/components/ui/navigation-icon";
 import hotelBackground from "@/assets/hotel-background.jpg";
@@ -17,6 +18,7 @@ const services = [
 ];
 
 export default function HotelDashboard() {
+  const navigate = useNavigate();
   const [timeState, setTimeState] = useState<TimeState>({
     time: "",
     date: "",
@@ -82,7 +84,22 @@ export default function HotelDashboard() {
 
   const handleServiceClick = (serviceId: string) => {
     console.log(`Opening ${serviceId} service`);
-    // TODO: Navigate to specific service
+    switch (serviceId) {
+      case "iptv":
+        navigate("/iptv");
+        break;
+      case "movie":
+        navigate("/movie");
+        break;
+      case "menu":
+        navigate("/menu");
+        break;
+      case "music":
+        navigate("/music");
+        break;
+      default:
+        console.log(`Service ${serviceId} not implemented yet`);
+    }
   };
 
   return (
