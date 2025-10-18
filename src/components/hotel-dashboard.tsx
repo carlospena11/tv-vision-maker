@@ -106,23 +106,25 @@ export default function HotelDashboard() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-background">
+    <div className="min-h-screen relative overflow-hidden bg-slate-900">
       {/* Video Background */}
       <video
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
+        style={{ zIndex: 0 }}
       >
-        <source src="https://cdn.coverr.co/videos/coverr-luxury-hotel-lobby-6166/1080p.mp4" type="video/mp4" />
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-luxury-resort-pool-aerial-view-1888-large.mp4" type="video/mp4" />
       </video>
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-overlay" />
+      <div className="absolute inset-0 bg-gradient-overlay" style={{ zIndex: 1 }} />
       
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col">
+      <div className="relative min-h-screen flex flex-col" style={{ zIndex: 10 }}>
         {/* Header */}
         <header className="flex justify-between items-start p-8">
           {/* Time and Date */}
