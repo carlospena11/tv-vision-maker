@@ -6,16 +6,6 @@ import hotelBackground from "@/assets/hotel-background.jpg";
 
 type FlightType = "departures" | "arrivals";
 
-// Logos de aerolíneas principales
-const airlineLogos = [
-  { name: "Avianca", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Avianca_Logo.svg/320px-Avianca_Logo.svg.png" },
-  { name: "Copa Airlines", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Copa_Airlines_logo.svg/320px-Copa_Airlines_logo.svg.png" },
-  { name: "American Airlines", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/American_Airlines_logo_2013.svg/320px-American_Airlines_logo_2013.svg.png" },
-  { name: "United Airlines", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/United_Airlines_Logo.svg/320px-United_Airlines_Logo.svg.png" },
-  { name: "Delta", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Delta_logo.svg/320px-Delta_logo.svg.png" },
-  { name: "TACA", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/TACA_logo.svg/320px-TACA_logo.svg.png" },
-];
-
 export default function FlightsPage() {
   const navigate = useNavigate();
   const [currentTime, setCurrentTime] = useState("");
@@ -107,24 +97,6 @@ export default function FlightsPage() {
                 HORA LOCAL
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Logos de aerolíneas */}
-        <div className="mb-6 backdrop-blur-md bg-slate-900/50 rounded-lg p-4 border border-slate-700/50">
-          <div className="flex items-center justify-center gap-6 flex-wrap">
-            {airlineLogos.map((airline) => (
-              <div
-                key={airline.name}
-                className="bg-white/90 p-3 rounded-lg shadow-lg hover:scale-105 transition-transform w-32 h-16 flex items-center justify-center"
-              >
-                <img
-                  src={airline.logo}
-                  alt={airline.name}
-                  className="max-w-full max-h-full object-contain"
-                />
-              </div>
-            ))}
           </div>
         </div>
 
