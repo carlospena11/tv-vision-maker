@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Tv, Calendar, UtensilsCrossed, Headphones, Plane } from "lucide-react";
 import { NavigationIcon } from "@/components/ui/navigation-icon";
+import hotelBackground from "@/assets/hotel-background.jpg";
 
 interface TimeState {
   time: string;
@@ -106,25 +107,20 @@ export default function HotelDashboard() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-slate-900">
-      {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: 0 }}
-      >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-luxury-resort-pool-aerial-view-1888-large.mp4" type="video/mp4" />
-      </video>
-      
+    <div 
+      className="min-h-screen relative overflow-hidden bg-background"
+      style={{
+        backgroundImage: `url(${hotelBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-overlay" style={{ zIndex: 1 }} />
+      <div className="absolute inset-0 bg-gradient-overlay" />
       
       {/* Content */}
-      <div className="relative min-h-screen flex flex-col" style={{ zIndex: 10 }}>
+      <div className="relative z-10 min-h-screen flex flex-col">
         {/* Header */}
         <header className="flex justify-between items-start p-8">
           {/* Time and Date */}
