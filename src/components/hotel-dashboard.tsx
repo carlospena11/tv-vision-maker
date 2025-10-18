@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Tv, Calendar, UtensilsCrossed, Headphones, Plane } from "lucide-react";
 import { NavigationIcon } from "@/components/ui/navigation-icon";
-import hotelBackground from "@/assets/hotel-background.jpg";
 
 interface TimeState {
   time: string;
@@ -107,15 +106,18 @@ export default function HotelDashboard() {
   };
 
   return (
-    <div 
-      className="min-h-screen relative overflow-hidden bg-background"
-      style={{
-        backgroundImage: `url(${hotelBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
+    <div className="min-h-screen relative overflow-hidden bg-background">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="https://cdn.coverr.co/videos/coverr-luxury-hotel-lobby-6166/1080p.mp4" type="video/mp4" />
+      </video>
+      
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-overlay" />
       
