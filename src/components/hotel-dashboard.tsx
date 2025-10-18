@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Tv, Calendar, UtensilsCrossed, Headphones } from "lucide-react";
+import { Tv, Calendar, UtensilsCrossed, Headphones, Plane } from "lucide-react";
 import { NavigationIcon } from "@/components/ui/navigation-icon";
 import hotelBackground from "@/assets/hotel-background.jpg";
 
@@ -15,6 +15,7 @@ const services = [
   { icon: Calendar, label: "Movie", id: "movie" },
   { icon: UtensilsCrossed, label: "Menu", id: "menu" },
   { icon: Headphones, label: "Music", id: "music" },
+  { icon: Plane, label: "Vuelos", id: "flights" },
 ];
 
 export default function HotelDashboard() {
@@ -96,6 +97,9 @@ export default function HotelDashboard() {
         break;
       case "music":
         navigate("/music");
+        break;
+      case "flights":
+        navigate("/flights");
         break;
       default:
         console.log(`Service ${serviceId} not implemented yet`);
