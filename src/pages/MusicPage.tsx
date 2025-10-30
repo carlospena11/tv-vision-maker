@@ -120,7 +120,7 @@ export default function MusicPage() {
           <img 
             src={hotelLogo} 
             alt="Hotel Tolteka" 
-            className="h-16 w-auto drop-shadow-lg"
+            className="h-16 w-auto drop-shadow-lg brightness-0 invert"
           />
           <div className="w-32" />
         </header>

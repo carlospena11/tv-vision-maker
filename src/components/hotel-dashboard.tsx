@@ -154,7 +154,7 @@ export default function HotelDashboard() {
             <img 
               src={hotelLogo} 
               alt="Hotel Tolteka" 
-              className="w-80 h-auto drop-shadow-2xl"
+              className="w-80 h-auto drop-shadow-2xl brightness-0 invert"
             />
           </div>
 
