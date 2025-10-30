@@ -9,6 +9,7 @@ import MoviePage from "./pages/MoviePage";
 import MenuPage from "./pages/MenuPage";
 import MusicPage from "./pages/MusicPage";
 import FlightsPage from "./pages/FlightsPage";
+import PromotionsPage from "./pages/PromotionsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/promotions" element={<PromotionsPage />} />
           <Route path="/iptv" element={<IptvPage />} />
           <Route path="/movie" element={<MoviePage />} />
           <Route path="/menu" element={<MenuPage />} />

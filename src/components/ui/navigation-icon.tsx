@@ -17,27 +17,31 @@ export const NavigationIcon = forwardRef<HTMLButtonElement, NavigationIconProps>
         ref={ref}
         onClick={onClick}
         className={cn(
-          "group relative flex flex-col items-center justify-center",
-          "w-24 h-24 rounded-full transition-smooth",
-          "backdrop-blur-md border border-glass-border",
-          "bg-glass hover:bg-glass focus:bg-glass",
-          "hover:shadow-glow focus:shadow-glow focus:outline-none",
-          "hover:scale-110 focus:scale-110",
-          focused && "shadow-glow scale-110 bg-primary/20 border-primary/30",
+          "group relative flex flex-col items-center justify-center gap-3",
+          "transition-smooth focus:outline-none",
           className
         )}
       >
-        <Icon 
-          className={cn(
-            "w-8 h-8 mb-2 transition-smooth text-foreground/80",
-            "group-hover:text-foreground group-focus:text-foreground",
-            focused && "text-primary"
-          )} 
-        />
+        <div className={cn(
+          "w-20 h-20 rounded-full flex items-center justify-center transition-smooth",
+          "backdrop-blur-md border border-white/20",
+          "bg-white/10 hover:bg-white/20 focus:bg-white/20",
+          "hover:shadow-glow focus:shadow-glow",
+          "hover:scale-110 focus:scale-110",
+          focused && "shadow-glow scale-110 bg-white/25 border-white/40"
+        )}>
+          <Icon 
+            className={cn(
+              "w-8 h-8 transition-smooth text-white/90",
+              "group-hover:text-white group-focus:text-white",
+              focused && "text-white"
+            )} 
+          />
+        </div>
         <span className={cn(
-          "text-sm font-medium transition-smooth text-foreground/70",
-          "group-hover:text-foreground group-focus:text-foreground",
-          focused && "text-primary"
+          "text-sm font-medium transition-smooth text-white/80",
+          "group-hover:text-white group-focus:text-white",
+          focused && "text-white"
         )}>
           {label}
         </span>

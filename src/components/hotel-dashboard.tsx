@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Tv, Calendar, UtensilsCrossed, Headphones, Plane } from "lucide-react";
+import { Gift, Film, Utensils, Music, Plane } from "lucide-react";
 import { NavigationIcon } from "@/components/ui/navigation-icon";
-import hotelBackground from "@/assets/hotel-background.jpg";
 
 interface TimeState {
   time: string;
@@ -11,10 +10,10 @@ interface TimeState {
 }
 
 const services = [
-  { icon: Tv, label: "IPTV", id: "iptv" },
-  { icon: Calendar, label: "Movie", id: "movie" },
-  { icon: UtensilsCrossed, label: "Menu", id: "menu" },
-  { icon: Headphones, label: "Music", id: "music" },
+  { icon: Gift, label: "Promociones", id: "promotions" },
+  { icon: Film, label: "Movie", id: "movie" },
+  { icon: Utensils, label: "Servicios", id: "menu" },
+  { icon: Music, label: "Music", id: "music" },
   { icon: Plane, label: "Vuelos", id: "flights" },
 ];
 
@@ -86,8 +85,8 @@ export default function HotelDashboard() {
   const handleServiceClick = (serviceId: string) => {
     console.log(`Opening ${serviceId} service`);
     switch (serviceId) {
-      case "iptv":
-        navigate("/iptv");
+      case "promotions":
+        navigate("/promotions");
         break;
       case "movie":
         navigate("/movie");
@@ -108,9 +107,9 @@ export default function HotelDashboard() {
 
   return (
     <div 
-      className="min-h-screen relative overflow-hidden bg-background"
+      className="min-h-screen relative overflow-hidden bg-slate-900"
       style={{
-        backgroundImage: `url(${hotelBackground})`,
+        backgroundImage: `url(https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -150,18 +149,18 @@ export default function HotelDashboard() {
         {/* Main Content */}
         <main className="flex-1 flex flex-col items-center justify-center px-8">
           {/* Hotel Logo */}
-          <div className="mb-8">
-            <div className="text-lg text-foreground/80 font-medium">
-              Mi Hotel Logo
+          <div className="mb-6">
+            <div className="text-base text-foreground/70 font-light">
+              Logo del hotel
             </div>
           </div>
 
           {/* Welcome Message */}
-          <div className="text-center mb-16">
-            <h1 className="text-7xl font-bold text-foreground mb-4">
+          <div className="text-center mb-20">
+            <h1 className="text-8xl font-bold text-white mb-3 drop-shadow-lg">
               {timeState.greeting}
             </h1>
-            <p className="text-2xl text-foreground/80">
+            <p className="text-xl text-white/90 drop-shadow-md">
               Le deseamos una agradable estancia
             </p>
           </div>
