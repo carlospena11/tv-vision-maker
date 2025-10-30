@@ -3,7 +3,7 @@ import { ArrowLeft, Play, Star, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import hotelBackground from "@/assets/hotel-background.jpg";
+import hotelLogo from "@/assets/hotel-tolteka-logo.png";
 
 const movieGenres = [
   {
@@ -77,9 +77,9 @@ export default function MoviePage() {
 
   return (
     <div 
-      className="min-h-screen relative overflow-hidden bg-background"
+      className="min-h-screen relative overflow-hidden bg-slate-900"
       style={{
-        backgroundImage: `url(${hotelBackground})`,
+        backgroundImage: `url(https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -91,14 +91,18 @@ export default function MoviePage() {
         {/* Header */}
         <header className="flex items-center justify-between mb-8">
           <Button
-            variant="secondary"
+            variant="ghost"
             onClick={() => navigate("/")}
-            className="flex items-center gap-2 bg-glass backdrop-blur-md border-glass-border hover:bg-glass"
+            className="flex items-center gap-2 text-white hover:bg-white/10"
           >
             <ArrowLeft className="w-4 h-4" />
-            Volver al inicio
+            Inicio
           </Button>
-          <h1 className="text-4xl font-bold text-foreground">Películas</h1>
+          <img 
+            src={hotelLogo} 
+            alt="Hotel Tolteka" 
+            className="h-16 w-auto drop-shadow-lg"
+          />
           <div className="w-32" />
         </header>
 

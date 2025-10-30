@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import hotelLogo from "@/assets/hotel-tolteka-logo.png";
 
 export default function PromotionsPage() {
   const navigate = useNavigate();
@@ -53,6 +54,12 @@ export default function PromotionsPage() {
             <ArrowLeft className="mr-2 h-5 w-5" />
             Inicio
           </Button>
+          <img 
+            src={hotelLogo} 
+            alt="Hotel Tolteka" 
+            className="h-16 w-auto drop-shadow-lg"
+          />
+          <div className="w-32" />
         </header>
 
         {/* Main Content */}

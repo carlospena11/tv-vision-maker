@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Gift, Film, Utensils, Music, Plane } from "lucide-react";
 import { NavigationIcon } from "@/components/ui/navigation-icon";
+import hotelLogo from "@/assets/hotel-tolteka-logo.png";
 
 interface TimeState {
   time: string;
@@ -149,10 +150,12 @@ export default function HotelDashboard() {
         {/* Main Content */}
         <main className="flex-1 flex flex-col items-center justify-center px-8">
           {/* Hotel Logo */}
-          <div className="mb-6">
-            <div className="text-base text-foreground/70 font-light">
-              Logo del hotel
-            </div>
+          <div className="mb-8">
+            <img 
+              src={hotelLogo} 
+              alt="Hotel Tolteka" 
+              className="w-80 h-auto drop-shadow-2xl"
+            />
           </div>
 
           {/* Welcome Message */}
