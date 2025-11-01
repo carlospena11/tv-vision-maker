@@ -115,22 +115,11 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  /* Android TV: Dimensiones fijas para garantizar layout consistente */
-  html {
-    width: 1920px;
-    height: 1080px;
-    overflow: hidden;
-    position: fixed;
-  }
-
   body {
     @apply bg-background text-foreground;
-    width: 1920px;
-    height: 1080px;
-    overflow: hidden;
-    position: fixed;
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
 
   /* Prevenir layout shift en imágenes */
@@ -140,11 +129,10 @@ All colors MUST be HSL.
     height: auto;
   }
 
-  /* Forzar dimensiones para el root div */
+  /* Para Android TV: Contenedor con dimensiones específicas */
   #root {
-    width: 1920px;
-    height: 1080px;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
-    position: fixed;
   }
 }

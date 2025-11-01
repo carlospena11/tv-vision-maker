@@ -108,7 +108,7 @@ export default function HotelDashboard() {
 
   return (
     <div 
-      className="w-[1920px] h-[1080px] relative overflow-hidden bg-slate-900"
+      className="w-screen h-screen relative overflow-hidden bg-slate-900"
       style={{
         backgroundImage: `url(https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop)`,
         backgroundSize: 'cover',
@@ -122,7 +122,7 @@ export default function HotelDashboard() {
       {/* Content */}
       <div className="relative z-10 w-full h-full flex flex-col">
         {/* Header */}
-        <header className="flex justify-between items-start px-16 pt-12 pb-8">
+        <header className="flex justify-between items-start px-12 pt-8 pb-4">
           {/* Time and Date */}
           <div className="text-left">
             <div className="text-5xl font-bold text-foreground mb-2 font-mono">
@@ -148,30 +148,30 @@ export default function HotelDashboard() {
         </header>
 
         {/* Main Content */}
-        <main className="flex-1 flex flex-col items-center justify-center px-16">
+        <main className="flex-1 flex flex-col items-center justify-center px-12">
           {/* Hotel Logo */}
-          <div className="mb-8 flex justify-center">
+          <div className="w-full flex justify-center mb-6">
             <img 
               src={hotelLogo} 
               alt="Hotel Tolteka" 
               width="320"
               height="80"
-              className="w-80 drop-shadow-2xl brightness-0 invert mx-auto"
+              className="w-80 h-20 object-contain drop-shadow-2xl brightness-0 invert"
             />
           </div>
 
           {/* Welcome Message */}
-          <div className="text-center mb-16">
-            <h1 className="text-8xl font-bold text-white mb-4 drop-shadow-lg">
+          <div className="w-full text-center mb-14">
+            <h1 className="text-7xl lg:text-8xl font-bold text-white mb-3 drop-shadow-lg">
               {timeState.greeting}
             </h1>
-            <p className="text-2xl text-white/90 drop-shadow-md">
+            <p className="text-xl lg:text-2xl text-white/90 drop-shadow-md">
               Le deseamos una agradable estancia
             </p>
           </div>
 
           {/* Navigation */}
-          <nav className="flex gap-12 justify-center">
+          <nav className="w-full flex gap-8 lg:gap-12 justify-center items-center">
             {services.map((service, index) => (
               <NavigationIcon
                 key={service.id}
@@ -188,8 +188,8 @@ export default function HotelDashboard() {
         </main>
 
         {/* Footer Hint */}
-        <footer className="px-16 pb-12 text-center">
-          <p className="text-base text-foreground/60">
+        <footer className="px-12 pb-8 text-center">
+          <p className="text-sm lg:text-base text-foreground/60">
             Use las flechas ← → para navegar y Enter para seleccionar
           </p>
         </footer>
