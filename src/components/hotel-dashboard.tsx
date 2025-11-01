@@ -148,18 +148,20 @@ export default function HotelDashboard() {
         </header>
 
         {/* Main Content */}
-        <main className="flex-1 flex flex-col items-center justify-center px-8">
+        <main className="flex-1 flex flex-col items-center justify-center px-8 -mt-12">
           {/* Hotel Logo */}
-          <div className="mb-8">
+          <div className="mb-4">
             <img 
               src={hotelLogo} 
               alt="Hotel Tolteka" 
-              className="w-80 h-auto drop-shadow-2xl brightness-0 invert"
+              width="320"
+              height="80"
+              className="w-80 drop-shadow-2xl brightness-0 invert"
             />
           </div>
 
           {/* Welcome Message */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-12">
             <h1 className="text-8xl font-bold text-white mb-3 drop-shadow-lg">
               {timeState.greeting}
             </h1>
