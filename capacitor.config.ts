@@ -9,7 +9,10 @@ const config: CapacitorConfig = {
     cleartext: true
   },
   android: {
-    allowMixedContent: true
+    allowMixedContent: true,
+    // Android TV configuration
+    useLegacyBridge: false,
+    backgroundColor: '#0f172a'
   }
 };
 
